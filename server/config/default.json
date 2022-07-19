@@ -1,0 +1,25 @@
+{
+    "server": {
+        "port": 3000
+    },
+    "database": {
+      "dbname": "management",
+      "username": "root",
+      "password": "",
+      "options": {
+        "host": "localhost",
+        "dialect": "mysql",
+        "operatorsAliases": false,
+        "pool": {
+          "max": 5,
+          "min": 0,
+          "idle": 10000
+        },
+        "dialectOptions": {
+          "dateStrings": true,
+          "typeCast": true
+        },
+        "timezone": "Europe/Rome"
+      }
+    }
+}

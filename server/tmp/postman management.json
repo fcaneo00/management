@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "609be2dd-2c25-467e-b19d-6a73cc48512f",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19710020"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstname\": \"nome\",\n\t\"lastname\": \"cognome\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_API_URL}}/orders",
+					"host": [
+						"{{BASE_API_URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstname\": \"nome2\",\n\t\"lastname\": \"cognome2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_API_URL}}/orders/5f24500ae631dd163c7ed47b",
+					"host": [
+						"{{BASE_API_URL}}"
+					],
+					"path": [
+						"orders",
+						"5f24500ae631dd163c7ed47b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_API_URL}}/orders/5f244425a3cd67152c08d3ce",
+					"host": [
+						"{{BASE_API_URL}}"
+					],
+					"path": [
+						"orders",
+						"5f244425a3cd67152c08d3ce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_API_URL}}/orders",
+					"host": [
+						"{{BASE_API_URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders/id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_API_URL}}/orders/5f27efb4215829348c0d8eb5",
+					"host": [
+						"{{BASE_API_URL}}"
+					],
+					"path": [
+						"orders",
+						"5f27efb4215829348c0d8eb5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_API_URL",
+			"value": "http://localhost:8080"
+		}
+	]
+}

@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "config": "^3.3.7",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.1"
+  },
+  "name": "server",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "fcaneo00 <filippo.caneo@gmail.com>",
+  "license": "ISC",
+  "description": "Backend services",
+  "devDependencies": {},
+  "repository": {
+    "url": "https://github.com/fcaneo00/management/tree/main/server"
+  },
+  "bugs": {
+    "url": "https://github.com/fcaneo00/management/issues"
+  },
+  "homepage": "https://github.com/fcaneo00/management#readme"
+}
