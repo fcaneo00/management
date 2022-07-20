@@ -23,12 +23,12 @@ router.get("/:code", (req, res) => {
 });
 
 // /api/v1/products/:id Delete Product by id
-router.delete("/:id", (req, res) => {
+router.delete("/:code", (req, res) => {
   //Delete Product by id
   Product.destroy({
-    where: { id: req.params.id }
+    where: { code: req.params.code }
   })
-    .then(result => res.json("Deleted ID " + req.params.id))
+    .then(result => res.json({ message: "Deleted code " + req.params.code }))
     .catch(err => console.log(err))
 })
 
