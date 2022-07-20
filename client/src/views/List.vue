@@ -90,8 +90,8 @@ export default {
                 .catch(err => console.log(err))
         },
 
-        deleteField(productCode) {
-            axios.delete(url + "/products/" + productCode)
+        async deleteField(productCode) {
+            await axios.delete(url + "/products/" + productCode)
                 .then((res) => {
                     const idx = this.products.indexOf(productCode)
                     this.products.splice(idx, 1)
@@ -105,7 +105,7 @@ export default {
             this.role = this.$store.state.user.role
 
             // Print List
-            axios.get(url + "/products")
+            await axios.get(url + "/products")
                 .then(res => (
                     this.products = res.data
                 ))
