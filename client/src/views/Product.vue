@@ -1,5 +1,6 @@
 <template>
     <div id="product">
+        <NavBar :userName="name"></NavBar>
         <form @submit.prevent="modify">
             <div class="form-group">
                 <label>Descrizione</label>
@@ -35,6 +36,7 @@
 
 <script>
 import axios from "axios";
+import NavBar from "@/components/Navbar.vue"
 
 const url = "http://localhost:3000/api/v1"
 
@@ -64,6 +66,9 @@ export default {
     async mounted(){
         let response = await axios.get(url + "/products/" + this.$route.params.code)
         this.product = response.data
+    },
+    components: {
+        NavBar
     }
 }
 </script>

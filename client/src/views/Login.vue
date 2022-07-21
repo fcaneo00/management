@@ -1,5 +1,6 @@
 <template>
     <div id="login">
+        <NavBar :userName="name"></NavBar>
         <form @submit.prevent="login">
             <div class="mb-3">
                 <div class="row g-3 align-items-center">
@@ -31,6 +32,7 @@
 
 <script>
 import axios from "axios";
+import NavBar from "@/components/Navbar.vue"
 
 const url = "http://localhost:3000/api/v1"
 
@@ -68,6 +70,9 @@ export default {
                 this.password = ""
             }
         }
+    },
+    components: {
+        NavBar
     }
 }
 </script>

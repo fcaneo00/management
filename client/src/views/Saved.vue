@@ -1,5 +1,6 @@
 <template>
     <div id="listino">
+        <NavBar :userName="name"></NavBar>
         <div v-for="(order, index) in savedOrders" :key="index">
             Ordine {{ order.id }} del {{ order.updatedAt }} <button class="btn btn-primary">Apri ordine</button>
         </div>
@@ -8,6 +9,7 @@
 
 <script>
 import axios from "axios"
+import NavBar from "@/components/Navbar.vue"
 
 const url = "http://localhost:3000/api/v1"
 
@@ -37,6 +39,7 @@ export default {
             ))
     },
     components: {
+        NavBar
     }
 }
 </script>

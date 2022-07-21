@@ -1,5 +1,6 @@
 <template>
     <div id="listino">
+        <NavBar :userName="name"></NavBar>
         <table id="listaProdotti" class="table table-bordered">
             <thead>
                 <tr>
@@ -32,6 +33,7 @@
 
 <script>
 import axios from "axios"
+import NavBar from "@/components/Navbar.vue"
 
 const url = "http://localhost:3000/api/v1"
 
@@ -115,6 +117,7 @@ export default {
         }
     },
     components: {
+        NavBar
     },
 }
 </script>
